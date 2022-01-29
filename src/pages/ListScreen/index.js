@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Container, Text, Button } from "./styles";
+import { useSelector } from "react-redux";
+
+import { Container, AddButton, AddButtonImage } from "./styles";
 
 export default () => {
   const navigation = useNavigation();
+  const list = useSelector((state) => state.notes.list);
 
-  return (
-    <Container>
-      <Text>ListScreen</Text>
-      <Button
-        title="Go to Edit"
-        onPress={() => navigation.navigate("EditNote")}
-      />
-    </Container>
-  );
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      title: "Suas notas",
+      headerRight: () => (
+        <AddButton
+          underlayColor="transparent"
+          onPress={() => navigation.navigate("EditNote")}
+        >
+          <AddButtonImage source={require("../../assets/more.png")} />
+        </AddButton>
+      ),
+    });
+  }, []);
+
+  return <Container></Container>;
 };
