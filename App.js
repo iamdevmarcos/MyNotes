@@ -8,11 +8,14 @@ import { store, persistor } from "./src/store";
 
 import MainStack from "./src/stacks/MainStack";
 
+import { StatusBar } from "expo-status-bar";
+
 export default () => {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer>
+          <StatusBar style="light" />
           <MainStack />
         </NavigationContainer>
       </PersistGate>
