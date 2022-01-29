@@ -2,6 +2,9 @@ import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 
+import AppLoading from "expo-app-loading";
+import { useFonts } from "expo-font";
+
 import {
   Container,
   AddButton,
@@ -39,6 +42,15 @@ export default () => {
     });
   };
 
+  let [fontsLoaded, error] = useFonts({
+    "Poppins-SemiBold": require("../../../assets/fonts/Poppins-SemiBold.ttf"),
+    "Poppins-Regular": require("../../../assets/fonts/Poppins-Regular.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   return (
     <Container>
       {list.length > 0 && (
@@ -53,7 +65,9 @@ export default () => {
       {list.length === 0 && (
         <NoNotes>
           <NoNotesImage source={require("../../assets/note.png")} />
-          <NoNotesText>Nenhuma anotação</NoNotesText>
+          <NoNotesText style={{ fontFamily: "Poppins-SemiBold" }}>
+            Nenhuma anotação
+          </NoNotesText>
         </NoNotes>
       )}
     </Container>

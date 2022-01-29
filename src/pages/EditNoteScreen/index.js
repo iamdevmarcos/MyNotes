@@ -4,7 +4,7 @@ import { Container, Text } from "./styles";
 export default () => {
   return (
     <Container>
-      <Text>EditNoteScreen</Text>
+      <Text style={{ fontFamily: "Poppins-SemiBold" }}>EditNoteScreen</Text>
     </Container>
   );
 };
