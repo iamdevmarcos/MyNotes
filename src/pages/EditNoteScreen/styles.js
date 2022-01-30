@@ -7,7 +7,6 @@ export const Container = styled.View`
 
 export const TitleInput = styled.TextInput`
   font-size: 20px;
-  font-weight: bold;
   padding: 15px;
   color: #222;
 `;
@@ -15,7 +14,7 @@ export const TitleInput = styled.TextInput`
 export const BodyInput = styled.TextInput`
   flex: 1;
   padding: 15px;
-  font-size: 15px;
+  font-size: 17px;
   color: #222;
 `;
 

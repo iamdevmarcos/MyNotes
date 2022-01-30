@@ -33,6 +33,6 @@ export const NoNotesImage = styled.Image`
 `;
 
 export const NoNotesText = styled.Text`
-  font-size: 18px;
+  font-size: 20px;
   color: #000;
 `;

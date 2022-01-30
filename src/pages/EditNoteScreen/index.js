@@ -107,26 +107,32 @@ export default () => {
       <TitleInput
         value={title}
         onChangeText={(t) => setTitle(t)}
-        placeholder="Digite o titulo da anotação"
+        placeholder="Título | ex: Correr 🏃"
         placeholderTextColor="#ccc"
         autoFocus={true}
+        style={{ fontFamily: "WorkSans-SemiBold" }}
       />
       <BodyInput
         value={body}
         onChangeText={(t) => setBody(t)}
-        placeholder="Digite o corpo da anotação"
+        placeholder="Detalhes | ex: Fazer caminhada amanhã por uma hora ou mais 😎"
         placeholderTextColor="#ccc"
         multiline={true}
         textAlignVertical="top"
+        style={{ fontFamily: "WorkSans-Regular" }}
       />
       {status === "edit" && (
         <ButtonsContainer>
           <DeleteButton underlayColor="#FF0000" onPress={handleDeleteNote}>
-            <DeleteButtonText>Excluir Anotação</DeleteButtonText>
+            <DeleteButtonText style={{ fontFamily: "WorkSans-Regular" }}>
+              Excluir anotação
+            </DeleteButtonText>
           </DeleteButton>
 
           <SuccessButton underlayColor="#2E8500" onPress={handleSuccessNote}>
-            <SuccessButtonText>Marcar como feito</SuccessButtonText>
+            <SuccessButtonText style={{ fontFamily: "WorkSans-Regular" }}>
+              Marcar como feito
+            </SuccessButtonText>
           </SuccessButton>
         </ButtonsContainer>
       )}

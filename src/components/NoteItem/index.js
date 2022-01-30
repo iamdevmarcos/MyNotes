@@ -6,7 +6,7 @@ export default ({ data, index, onPress }) => {
     <Box onPress={() => onPress(index)}>
       <Title
         style={{
-          fontFamily: "Poppins-SemiBold",
+          fontFamily: "WorkSans-SemiBold",
         }}
         success={data.done}
       >

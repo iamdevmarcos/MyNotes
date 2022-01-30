@@ -48,8 +48,10 @@ export default () => {
   };
 
   let [fontsLoaded, error] = useFonts({
-    "Poppins-SemiBold": require("../../../assets/fonts/Poppins-SemiBold.ttf"),
-    "Poppins-Regular": require("../../../assets/fonts/Poppins-Regular.ttf"),
+    "Poppins-SemiBold": require("../../../assets/fonts/Poppins/Poppins-SemiBold.ttf"),
+    "Poppins-Regular": require("../../../assets/fonts/Poppins/Poppins-Regular.ttf"),
+    "WorkSans-SemiBold": require("../../../assets/fonts/WorkSans/WorkSans-SemiBold.ttf"),
+    "WorkSans-Regular": require("../../../assets/fonts/WorkSans/WorkSans-Regular.ttf"),
   });
 
   if (!fontsLoaded) {
@@ -70,7 +72,7 @@ export default () => {
       {list.length === 0 && (
         <NoNotes>
           <NoNotesImage source={require("../../assets/nonotes.png")} />
-          <NoNotesText style={{ fontFamily: "Poppins-SemiBold" }}>
+          <NoNotesText style={{ fontFamily: "WorkSans-SemiBold" }}>
             Nenhuma anotação
           </NoNotesText>
         </NoNotes>
