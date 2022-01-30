@@ -2,9 +2,12 @@ import styled from "styled-components/native";
 
 export const Box = styled.TouchableHighlight`
   padding: 15px;
-  border-style: solid;
+  /* border-style: solid;
   border-bottom-color: #222;
-  border-bottom-width: 1px;
+  border-bottom-width: 1px; */
+  background: tomato;
+  margin: 10px;
+  border-radius: 30px;
 `;
 
 export const Title = styled.Text`
