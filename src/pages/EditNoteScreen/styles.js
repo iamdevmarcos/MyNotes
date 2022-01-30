@@ -21,6 +21,7 @@ export const BodyInput = styled.TextInput`
 
 export const SaveButton = styled.TouchableHighlight`
   margin-right: 15px;
+  padding: 10px;
 `;
 
 export const SaveButtonImage = styled.Image`

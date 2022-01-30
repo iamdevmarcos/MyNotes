@@ -7,6 +7,7 @@ export const Container = styled.View`
 
 export const AddButton = styled.TouchableHighlight`
   margin-right: 15px;
+  padding: 10px;
 `;
 
 export const AddButtonImage = styled.Image`
