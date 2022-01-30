@@ -11,9 +11,9 @@ export default () => (
   <MainStack.Navigator
     screenOptions={{
       headerStyle: {
-        backgroundColor: "#222",
+        backgroundColor: "#fff",
       },
-      headerTintColor: "#fff",
+      headerTintColor: "#222",
     }}
   >
     <MainStack.Screen

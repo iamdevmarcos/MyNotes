@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #333;
+  background-color: #fbfbfb;
 `;
 
 export const AddButton = styled.TouchableHighlight`
@@ -34,5 +34,5 @@ export const NoNotesImage = styled.Image`
 
 export const NoNotesText = styled.Text`
   font-size: 18px;
-  color: #fff;
+  color: #000;
 `;

@@ -9,7 +9,7 @@ export const Box = styled.TouchableHighlight`
 
 export const Title = styled.Text`
   font-size: 17px;
-  color: #fff;
+  color: #000;
   text-decoration: ${(props) =>
     props.success === true ? "line-through" : "none"};
 `;
