@@ -69,7 +69,7 @@ export default () => {
       )}
       {list.length === 0 && (
         <NoNotes>
-          <NoNotesImage source={require("../../assets/note.png")} />
+          <NoNotesImage source={require("../../assets/nonotes.png")} />
           <NoNotesText style={{ fontFamily: "Poppins-SemiBold" }}>
             Nenhuma anotação
           </NoNotesText>
