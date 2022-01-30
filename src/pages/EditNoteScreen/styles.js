@@ -39,14 +39,34 @@ export const CloseButtonImage = styled.Image`
   height: 16px;
 `;
 
+export const ButtonsContainer = styled.View`
+  flex: 1;
+  flex-direction: row;
+  align-items: flex-end;
+`;
+
 export const DeleteButton = styled.TouchableHighlight`
-  height: 40px;
+  height: 60px;
   background: #ff3333;
   justify-content: center;
   align-items: center;
+  flex: 1;
 `;
 
 export const DeleteButtonText = styled.Text`
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
+`;
+
+export const SuccessButton = styled.TouchableHighlight`
+  height: 60px;
+  background: #ffff00;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+`;
+
+export const SuccessButtonText = styled.Text`
+  font-size: 16px;
+  color: #000;
 `;

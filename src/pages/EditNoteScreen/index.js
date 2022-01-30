@@ -10,8 +10,11 @@ import {
   SaveButtonImage,
   CloseButton,
   CloseButtonImage,
+  ButtonsContainer,
   DeleteButton,
   DeleteButtonText,
+  SuccessButton,
+  SuccessButtonText,
 } from "./styles";
 
 export default () => {
@@ -84,6 +87,8 @@ export default () => {
     navigation.navigate("List");
   };
 
+  const handleSuccessNote = () => alert("Feito!");
+
   return (
     <Container>
       <TitleInput
@@ -102,9 +107,15 @@ export default () => {
         textAlignVertical="top"
       />
       {status === "edit" && (
-        <DeleteButton underlayColor="#FF0000" onPress={handleDeleteNote}>
-          <DeleteButtonText>Excluir Anotação</DeleteButtonText>
-        </DeleteButton>
+        <ButtonsContainer>
+          <DeleteButton underlayColor="#FF0000" onPress={handleDeleteNote}>
+            <DeleteButtonText>Excluir Anotação</DeleteButtonText>
+          </DeleteButton>
+
+          <SuccessButton underlayColor="#00FF00" onPress={handleSuccessNote}>
+            <SuccessButtonText>Marcar como feito</SuccessButtonText>
+          </SuccessButton>
+        </ButtonsContainer>
       )}
     </Container>
   );
