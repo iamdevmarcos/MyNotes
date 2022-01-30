@@ -1,4 +1,5 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
+import { BackHandler } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from "react-redux";
 
@@ -20,11 +21,15 @@ import NoteItem from "../../components/NoteItem";
 export default () => {
   const navigation = useNavigation();
   const list = useSelector((state) => state.notes.list);
-  // const list = [];
+
+  useEffect(() => {
+    BackHandler.addEventListener("hardwareBackPress", () => true);
+  }, []);
 
   useLayoutEffect(() => {
     navigation.setOptions({
       title: "Suas notas",
+      headerLeft: false,
       headerRight: () => (
         <AddButton
           underlayColor="transparent"
