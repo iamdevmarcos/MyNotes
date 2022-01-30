@@ -2,21 +2,21 @@ import styled from "styled-components/native";
 
 export const Container = styled.View`
   flex: 1;
-  background: #333;
+  background: #fff;
 `;
 
 export const TitleInput = styled.TextInput`
   font-size: 20px;
   font-weight: bold;
   padding: 15px;
-  color: #fff;
+  color: #222;
 `;
 
 export const BodyInput = styled.TextInput`
   flex: 1;
   padding: 15px;
   font-size: 15px;
-  color: #fff;
+  color: #222;
 `;
 
 export const SaveButton = styled.TouchableHighlight`
@@ -47,7 +47,7 @@ export const ButtonsContainer = styled.View`
 
 export const DeleteButton = styled.TouchableHighlight`
   height: 60px;
-  background: #ff3333;
+  background: #f64340;
   justify-content: center;
   align-items: center;
   flex: 1;
@@ -60,7 +60,7 @@ export const DeleteButtonText = styled.Text`
 
 export const SuccessButton = styled.TouchableHighlight`
   height: 60px;
-  background: #ffff00;
+  background: #28a745;
   justify-content: center;
   align-items: center;
   flex: 1;
@@ -68,5 +68,5 @@ export const SuccessButton = styled.TouchableHighlight`
 
 export const SuccessButtonText = styled.Text`
   font-size: 16px;
-  color: #000;
+  color: #fff;
 `;

@@ -125,7 +125,7 @@ export default () => {
             <DeleteButtonText>Excluir Anotação</DeleteButtonText>
           </DeleteButton>
 
-          <SuccessButton underlayColor="#00FF00" onPress={handleSuccessNote}>
+          <SuccessButton underlayColor="#2E8500" onPress={handleSuccessNote}>
             <SuccessButtonText>Marcar como feito</SuccessButtonText>
           </SuccessButton>
         </ButtonsContainer>
