@@ -1,5 +1,5 @@
 const initialState = {
-  list: [{ title: "First Note", body: "test 1, 2, 3" }],
+  list: [{ title: "First Note", body: "test 1, 2, 3", done: false }],
 };
 
 export default (state = initialState, action) => {
@@ -10,6 +10,7 @@ export default (state = initialState, action) => {
       newList.push({
         title: action.payload.title,
         body: action.payload.body,
+        done: false,
       });
 
       break;
@@ -19,12 +20,23 @@ export default (state = initialState, action) => {
         newList[action.payload.key] = {
           title: action.payload.title,
           body: action.payload.body,
+          done: action.payload.done,
         };
       }
       break;
 
     case "DELETE_NOTE":
       newList = newList.filter((item, index) => index !== action.payload.key);
+      break;
+
+    case "SUCCESS_NOTE":
+      if (newList[action.payload.key]) {
+        newList[action.payload.key] = {
+          title: action.payload.title,
+          body: action.payload.body,
+          done: true,
+        };
+      }
       break;
   }
 

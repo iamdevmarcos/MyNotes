@@ -25,6 +25,7 @@ export default () => {
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [done, setDone] = useState(false);
   const [status, setStatus] = useState("new");
 
   useEffect(() => {
@@ -32,6 +33,7 @@ export default () => {
       setStatus("edit");
       setTitle(list[route.params.key].title);
       setBody(list[route.params.key].body);
+      setDone(list[route.params.key].done);
     }
   }, []);
 
@@ -60,6 +62,7 @@ export default () => {
             key: route.params.key,
             title,
             body,
+            done,
           },
         });
       } else {
@@ -87,7 +90,17 @@ export default () => {
     navigation.navigate("List");
   };
 
-  const handleSuccessNote = () => alert("Feito!");
+  const handleSuccessNote = () => {
+    dispatch({
+      type: "SUCCESS_NOTE",
+      payload: {
+        key: route.params.key,
+        title,
+        body,
+      },
+    });
+    navigation.navigate("List");
+  };
 
   return (
     <Container>
