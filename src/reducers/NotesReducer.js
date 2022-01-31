@@ -38,6 +38,16 @@ export default (state = initialState, action) => {
         };
       }
       break;
+
+    case "UNCHECK_NOTE":
+      if (newList[action.payload.key]) {
+        newList[action.payload.key] = {
+          title: action.payload.title,
+          body: action.payload.body,
+          done: false,
+        };
+      }
+      break;
   }
 
   return { ...state, list: newList };

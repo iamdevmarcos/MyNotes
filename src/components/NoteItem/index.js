@@ -25,12 +25,21 @@ export default ({ data, index, onPress }) => {
     });
   };
 
-  const handleUnCheckNote = () => alert("desmaque");
+  const handleUnCheckNote = () => {
+    dispatch({
+      type: "UNCHECK_NOTE",
+      payload: {
+        key: index,
+        title: data.title,
+        body: data.body,
+      },
+    });
+  };
 
   return (
     <Box
       onPress={() => onPress(index)}
-      underlayColor="#ffffff"
+      underlayColor={data.done ? "#0000ff" : "#fff"}
       check={data.done}
     >
       <BoxContainer>
@@ -40,7 +49,7 @@ export default ({ data, index, onPress }) => {
           }}
           success={data.done}
         >
-          {data.title} - {data.done.toString()}
+          {data.title}
         </Title>
         {data.done !== true && (
           <Check onPress={handleCheckNote} underlayColor="transparent">
