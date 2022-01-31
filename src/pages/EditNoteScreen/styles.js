@@ -69,3 +69,16 @@ export const SuccessButtonText = styled.Text`
   font-size: 16px;
   color: #fff;
 `;
+
+export const NoSuccessButton = styled.TouchableHighlight`
+  height: 60px;
+  background: #f0ad4e;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+`;
+
+export const NoSuccessButtonText = styled.Text`
+  font-size: 16px;
+  color: #fff;
+`;

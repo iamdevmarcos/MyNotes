@@ -15,6 +15,8 @@ import {
   DeleteButtonText,
   SuccessButton,
   SuccessButtonText,
+  NoSuccessButton,
+  NoSuccessButtonText,
 } from "./styles";
 
 export default () => {
@@ -102,6 +104,18 @@ export default () => {
     navigation.navigate("List");
   };
 
+  const handleNoSuccessNote = () => {
+    dispatch({
+      type: "UNCHECK_NOTE",
+      payload: {
+        key: route.params.key,
+        title,
+        body,
+      },
+    });
+    navigation.navigate("List");
+  };
+
   return (
     <Container>
       <TitleInput
@@ -129,11 +143,24 @@ export default () => {
             </DeleteButtonText>
           </DeleteButton>
 
-          <SuccessButton underlayColor="#2E8500" onPress={handleSuccessNote}>
-            <SuccessButtonText style={{ fontFamily: "WorkSans-Regular" }}>
-              Marcar como feito
-            </SuccessButtonText>
-          </SuccessButton>
+          {!done && (
+            <SuccessButton underlayColor="#2E8500" onPress={handleSuccessNote}>
+              <SuccessButtonText style={{ fontFamily: "WorkSans-Regular" }}>
+                Marcar como feito
+              </SuccessButtonText>
+            </SuccessButton>
+          )}
+
+          {done && (
+            <NoSuccessButton
+              underlayColor="#2E8500"
+              onPress={handleNoSuccessNote}
+            >
+              <NoSuccessButtonText style={{ fontFamily: "WorkSans-Regular" }}>
+                Desmarcar
+              </NoSuccessButtonText>
+            </NoSuccessButton>
+          )}
         </ButtonsContainer>
       )}
     </Container>
