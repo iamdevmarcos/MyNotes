@@ -18,7 +18,7 @@ export default ({ data, index, onPress }) => {
   };
 
   return (
-    <Box onPress={() => onPress(index)}>
+    <Box onPress={() => onPress(index)} underlayColor="#ffffff">
       <BoxContainer>
         <Title
           style={{
