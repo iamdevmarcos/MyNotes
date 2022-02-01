@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "myNotes",
-    "slug": "myNotes",
+    "slug": "expo.dev/@marcosdev.me/@mynotes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,7 +21,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.marcosdev.mynotes",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"
