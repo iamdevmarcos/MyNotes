@@ -48,8 +48,6 @@ export default () => {
   };
 
   let [fontsLoaded, error] = useFonts({
-    "Poppins-SemiBold": require("../../../assets/fonts/Poppins/Poppins-SemiBold.ttf"),
-    "Poppins-Regular": require("../../../assets/fonts/Poppins/Poppins-Regular.ttf"),
     "WorkSans-SemiBold": require("../../../assets/fonts/WorkSans/WorkSans-SemiBold.ttf"),
     "WorkSans-Regular": require("../../../assets/fonts/WorkSans/WorkSans-Regular.ttf"),
   });
