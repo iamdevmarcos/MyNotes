@@ -12,7 +12,6 @@ The idea of the App is:
 
 _"Make your day easier, make your life easier. Organize your notes and tasks"._
 
-this open source project was made for studies, and aims to replicate the macOS interface. <br />
 Be sure to send your feedback.
 
 ## Technology stack
