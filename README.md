@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://play.google.com/store/apps/dev?id=9174914011828107681">
-    <img src="./assets/Project.png">
+    <img src="./assets/Project.png" width="550">
   </a>
 </p>
 
