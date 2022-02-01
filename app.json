@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "myNotes",
-    "slug": "expo.dev/@marcosdev.me/@mynotes",
-    "version": "1.0.0",
+    "name": "MyNotes",
+    "slug": "MyNotes",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
