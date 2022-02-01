@@ -1,5 +1,5 @@
 const initialState = {
-  list: [{ title: "First Note", body: "test 1, 2, 3", done: false }],
+  list: [],
 };
 
 export default (state = initialState, action) => {
