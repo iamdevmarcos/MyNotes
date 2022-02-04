@@ -1,7 +1,7 @@
 # MyNotes
 
 <p align="center">
-  <a href="https://play.google.com/store/apps/dev?id=9174914011828107681">
+  <a href="https://play.google.com/store/apps/details?id=com.iamdevmarcos.mynotes">
     <img src="./assets/Project.png" width="550">
   </a>
 </p>
@@ -21,11 +21,11 @@ Be sure to send your feedback.
 
 ## Download from Play Store
 
-[Click Here](https://play.google.com/store/apps/dev?id=9174914011828107681)
+[Click Here](https://play.google.com/store/apps/details?id=com.iamdevmarcos.mynotes)
 
 ## Download the APK
 
-[Click Here](https://play.google.com/store/apps/dev?id=9174914011828107681)
+Coming Soon
 
 ## Running locally
 
